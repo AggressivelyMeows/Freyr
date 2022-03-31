@@ -10,10 +10,13 @@ License text copyright (c) 2017 MariaDB Corporation Ab, All Rights Reserved.
 Parameters
 
 Licensor:             Connor Vince
+
 Licensed Work:        Freyr, Weather data API
                       The Licensed Work is (c)2022 Connor Vince.
+                      
 Additional Use Grant: You may make use of the Licensed Work, provided you
                       do not use it in any of the following ways:
+                      
 
                       * Sell hosted Freyr services as a "SaaS" Product
 
