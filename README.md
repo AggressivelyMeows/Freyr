@@ -1,5 +1,3 @@
-![](logo.svg)
-
 # Freyr - The weather API, on the edge
 
 > Freyr, in Norse mythology, the ruler of peace and fertility, rain, and sunshine and the son of the sea god Njörd.
