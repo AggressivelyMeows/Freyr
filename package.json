@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@tsndr/cloudflare-worker-router": "^1.2.3",
-    "cfw-easy-utils": "^1.0.2",
+    "cfw-easy-utils": "^1.0.3",
     "d3-geo": "^3.0.1",
     "joi": "^17.6.0",
     "moment": "^2.29.1",

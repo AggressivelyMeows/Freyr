@@ -1,12 +1,18 @@
-const moment = require("moment");
-
+import moment from 'moment'
 import { convert_units, conversion_units } from './utils.js'
 
 export default class NWSProvider {
     constructor() {
+        this.provider_id = 'NWS'
         this.country_codes = ['us'] // this provider  is for the United States
         this.fetch_options = {headers: {'User-Agent': '(Freyr, contact@ceru.dev)'}}
         this.units = {}
+
+        // test cases
+        this.test_cases = {
+            valid: 'Austin, TX',
+            invalid: 'London'
+        }
     }
 
     unpack_raw(hour, raw_values, time, units) {
@@ -102,7 +108,7 @@ export default class NWSProvider {
         const nearest_weather_station = await fetch(`https://api.weather.gov/points/${lat},${lon}`, this.fetch_options).then(resp => resp.json())
         options.stopwatch.mark(`Found nearest weather station (${nearest_weather_station.properties.radarStation})`)
 
-        const forecast = await fetch(nearest_weather_station.properties.forecast, this.fetch_options).then(resp => resp.json())
+        const forecast = await fetch(options.force_error ? 'https://api.weather.gov/gridpoints/TOP/31,0/forecast' : nearest_weather_station.properties.forecast, this.fetch_options).then(resp => resp.json())
         const hourly_raw = await fetch(nearest_weather_station.properties.forecastHourly, this.fetch_options).then(resp => resp.json())
         const raw = await fetch(nearest_weather_station.properties.forecastGridData, this.fetch_options).then(resp => resp.json())
 
@@ -128,7 +134,7 @@ export default class NWSProvider {
             forecast: {
                 latitude: lat,
                 longitude: lon,
-                provider: 'NWS',
+                provider: this.provider_id,
                 provider_specific: {
                     radar_image: `https://radar.weather.gov/ridge/lite/${nearest_weather_station.properties.radarStation}_0.gif`,
                 },

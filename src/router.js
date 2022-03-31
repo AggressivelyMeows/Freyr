@@ -2,15 +2,10 @@ import { geocode } from './geocoding.js'
 import { Stopwatch } from 'cfw-easy-utils'
 import { forecast_schema } from './schemas/forecast.js'
 
-// import providers
-import NWSProvider from './providers/nws.js'
+import { providers } from './providers/all.js'
 
 const Router = require('@tsndr/cloudflare-worker-router')
 const router = new Router()
-
-const providers = [
-    new NWSProvider()
-]
 
 router.cors()
 
@@ -39,7 +34,21 @@ router.get('/v1/forecast', async (req, res) => {
 
     Object.assign(options, req.query)
 
+    const start = new Date()
+
     let weather = await provider.get_weather(geocoded_location.lat, geocoded_location.lon, options)
+
+    const record = async () => {
+        // wrap for debug
+        await fetch(
+            `https://api.constellations.tech/v2/freyr-requests?value=${new Date().getTime() - start.getTime()}&country=${geocoded_location.address.country_code}&provider=${provider.provider_id}`,
+            { headers: { 'Authorization': `${globalThis.CONSTELLATIONS_REQUESTS_KEY}` } }
+        )
+    }
+
+    globalThis.event.waitUntil(
+        record()
+    )
 
     if (weather.success) {
         const validate = forecast_schema.validate(weather.forecast)
