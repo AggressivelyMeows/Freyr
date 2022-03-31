@@ -1,0 +1,19 @@
+name = "freyr"
+type = "javascript"
+compatibility_date = "2022-03-30"
+account_id = "2dcc5a4f486a50625b4167e90d113158"
+workers_dev = true
+route = ""
+zone_id = ""
+kv_namespaces = [
+  { binding = "GEOCODING_CACHE", id = "e43d3d1590b84f23ba40f3002e6afeb8", preview_id = "e43d3d1590b84f23ba40f3002e6afeb8" },
+]
+
+# [secrets]
+# GEOCODE_API_KEY
+
+
+[build]
+command = "npm run build"
+[build.upload]
+format = "service-worker"

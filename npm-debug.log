@@ -1,0 +1,174 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'wrangler@beta',
+1 verbose cli   '-g' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData wrangler@beta
+8 silly fetchNamedPackageData wrangler
+9 silly mapToRegistry name wrangler
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/wrangler
+13 verbose get https://registry.npmjs.org/wrangler not expired, no request
+14 silly install normalizeTree
+15 silly loadCurrentTree Finishing
+16 silly loadIdealTree Starting
+17 silly install loadIdealTree
+18 silly cloneCurrentTree Starting
+19 silly install cloneCurrentTreeToIdealTree
+20 silly cloneCurrentTree Finishing
+21 silly loadShrinkwrap Starting
+22 silly install loadShrinkwrap
+23 silly loadShrinkwrap Finishing
+24 silly loadAllDepsIntoIdealTree Starting
+25 silly install loadAllDepsIntoIdealTree
+26 silly resolveWithNewModule wrangler@0.0.24 checking installable status
+27 silly cache add args [ 'wrangler@beta', null ]
+28 verbose cache add spec wrangler@beta
+29 silly cache add parsed spec Result {
+29 silly cache add   raw: 'wrangler@beta',
+29 silly cache add   scope: null,
+29 silly cache add   name: 'wrangler',
+29 silly cache add   rawSpec: 'beta',
+29 silly cache add   spec: 'beta',
+29 silly cache add   type: 'tag' }
+30 silly addNamed wrangler@beta
+31 verbose addNamed "beta" is being treated as a dist-tag for wrangler
+32 info addNameTag [ 'wrangler', 'beta' ]
+33 silly mapToRegistry name wrangler
+34 silly mapToRegistry using default registry
+35 silly mapToRegistry registry https://registry.npmjs.org/
+36 silly mapToRegistry uri https://registry.npmjs.org/wrangler
+37 verbose addNameTag registry:https://registry.npmjs.org/wrangler not in flight; fetching
+38 verbose get https://registry.npmjs.org/wrangler not expired, no request
+39 silly addNameTag next cb for wrangler with tag beta
+40 silly addNamed wrangler@0.0.24
+41 verbose addNamed "0.0.24" is a plain semver version for wrangler
+42 silly cache afterAdd wrangler@0.0.24
+43 verbose afterAdd /root/.npm/wrangler/0.0.24/package/package.json not in flight; writing
+44 verbose afterAdd /root/.npm/wrangler/0.0.24/package/package.json written
+45 silly fetchNamedPackageData esbuild
+46 silly mapToRegistry name esbuild
+47 silly mapToRegistry using default registry
+48 silly mapToRegistry registry https://registry.npmjs.org/
+49 silly mapToRegistry uri https://registry.npmjs.org/esbuild
+50 silly fetchNamedPackageData miniflare
+51 silly mapToRegistry name miniflare
+52 silly mapToRegistry using default registry
+53 silly mapToRegistry registry https://registry.npmjs.org/
+54 silly mapToRegistry uri https://registry.npmjs.org/miniflare
+55 silly fetchNamedPackageData path-to-regexp
+56 silly mapToRegistry name path-to-regexp
+57 silly mapToRegistry using default registry
+58 silly mapToRegistry registry https://registry.npmjs.org/
+59 silly mapToRegistry uri https://registry.npmjs.org/path-to-regexp
+60 silly fetchNamedPackageData selfsigned
+61 silly mapToRegistry name selfsigned
+62 silly mapToRegistry using default registry
+63 silly mapToRegistry registry https://registry.npmjs.org/
+64 silly mapToRegistry uri https://registry.npmjs.org/selfsigned
+65 silly fetchNamedPackageData semiver
+66 silly mapToRegistry name semiver
+67 silly mapToRegistry using default registry
+68 silly mapToRegistry registry https://registry.npmjs.org/
+69 silly mapToRegistry uri https://registry.npmjs.org/semiver
+70 silly fetchNamedPackageData xxhash-wasm
+71 silly mapToRegistry name xxhash-wasm
+72 silly mapToRegistry using default registry
+73 silly mapToRegistry registry https://registry.npmjs.org/
+74 silly mapToRegistry uri https://registry.npmjs.org/xxhash-wasm
+75 silly fetchNamedPackageData fsevents
+76 silly mapToRegistry name fsevents
+77 silly mapToRegistry using default registry
+78 silly mapToRegistry registry https://registry.npmjs.org/
+79 silly mapToRegistry uri https://registry.npmjs.org/fsevents
+80 verbose request uri https://registry.npmjs.org/miniflare
+81 verbose request no auth needed
+82 info attempt registry request try #1 at 1:58:59 PM
+83 verbose request id 6fb3e328075ccc1e
+84 http request GET https://registry.npmjs.org/miniflare
+85 verbose request uri https://registry.npmjs.org/selfsigned
+86 verbose request no auth needed
+87 info attempt registry request try #1 at 1:58:59 PM
+88 http request GET https://registry.npmjs.org/selfsigned
+89 verbose request uri https://registry.npmjs.org/semiver
+90 verbose request no auth needed
+91 info attempt registry request try #1 at 1:58:59 PM
+92 http request GET https://registry.npmjs.org/semiver
+93 verbose get https://registry.npmjs.org/esbuild not expired, no request
+94 silly resolveWithNewModule esbuild@0.14.23 checking installable status
+95 silly cache add args [ 'esbuild@0.14.23', null ]
+96 verbose cache add spec esbuild@0.14.23
+97 silly cache add parsed spec Result {
+97 silly cache add   raw: 'esbuild@0.14.23',
+97 silly cache add   scope: null,
+97 silly cache add   name: 'esbuild',
+97 silly cache add   rawSpec: '0.14.23',
+97 silly cache add   spec: '0.14.23',
+97 silly cache add   type: 'version' }
+98 silly addNamed esbuild@0.14.23
+99 verbose addNamed "0.14.23" is a plain semver version for esbuild
+100 silly mapToRegistry name esbuild
+101 silly mapToRegistry using default registry
+102 silly mapToRegistry registry https://registry.npmjs.org/
+103 silly mapToRegistry uri https://registry.npmjs.org/esbuild
+104 verbose addNameVersion registry:https://registry.npmjs.org/esbuild not in flight; fetching
+105 verbose get https://registry.npmjs.org/path-to-regexp not expired, no request
+106 silly resolveWithNewModule path-to-regexp@6.2.0 checking installable status
+107 silly cache add args [ 'path-to-regexp@^6.2.0', null ]
+108 verbose cache add spec path-to-regexp@^6.2.0
+109 silly cache add parsed spec Result {
+109 silly cache add   raw: 'path-to-regexp@^6.2.0',
+109 silly cache add   scope: null,
+109 silly cache add   name: 'path-to-regexp',
+109 silly cache add   rawSpec: '^6.2.0',
+109 silly cache add   spec: '>=6.2.0 <7.0.0',
+109 silly cache add   type: 'range' }
+110 silly addNamed path-to-regexp@>=6.2.0 <7.0.0
+111 verbose addNamed ">=6.2.0 <7.0.0" is a valid semver range for path-to-regexp
+112 silly addNameRange { name: 'path-to-regexp',
+112 silly addNameRange   range: '>=6.2.0 <7.0.0',
+112 silly addNameRange   hasData: false }
+113 silly mapToRegistry name path-to-regexp
+114 silly mapToRegistry using default registry
+115 silly mapToRegistry registry https://registry.npmjs.org/
+116 silly mapToRegistry uri https://registry.npmjs.org/path-to-regexp
+117 verbose addNameRange registry:https://registry.npmjs.org/path-to-regexp not in flight; fetching
+118 verbose get https://registry.npmjs.org/xxhash-wasm not expired, no request
+119 verbose stack Error: Missing required argument #1
+119 verbose stack     at andLogAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:31:3)
+119 verbose stack     at fetchPackageMetadata (/usr/share/npm/lib/fetch-package-metadata.js:51:22)
+119 verbose stack     at resolveWithNewModule (/usr/share/npm/lib/install/deps.js:456:12)
+119 verbose stack     at /usr/share/npm/lib/install/deps.js:457:7
+119 verbose stack     at /usr/share/npm/node_modules/iferr/index.js:13:50
+119 verbose stack     at /usr/share/npm/lib/fetch-package-metadata.js:37:12
+119 verbose stack     at addRequestedAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:82:5)
+119 verbose stack     at returnAndAddMetadata (/usr/share/npm/lib/fetch-package-metadata.js:117:7)
+119 verbose stack     at pickVersionFromRegistryDocument (/usr/share/npm/lib/fetch-package-metadata.js:134:20)
+119 verbose stack     at /usr/share/npm/node_modules/iferr/index.js:13:50
+120 verbose cwd /root/x-rp/freyr
+121 error Linux 4.15.0-161-generic
+122 error argv "/usr/bin/node" "/usr/bin/npm" "install" "wrangler@beta" "-g"
+123 error node v8.10.0
+124 error npm  v3.5.2
+125 error code EMISSINGARG
+126 error typeerror Error: Missing required argument #1
+126 error typeerror     at andLogAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:31:3)
+126 error typeerror     at fetchPackageMetadata (/usr/share/npm/lib/fetch-package-metadata.js:51:22)
+126 error typeerror     at resolveWithNewModule (/usr/share/npm/lib/install/deps.js:456:12)
+126 error typeerror     at /usr/share/npm/lib/install/deps.js:457:7
+126 error typeerror     at /usr/share/npm/node_modules/iferr/index.js:13:50
+126 error typeerror     at /usr/share/npm/lib/fetch-package-metadata.js:37:12
+126 error typeerror     at addRequestedAndFinish (/usr/share/npm/lib/fetch-package-metadata.js:82:5)
+126 error typeerror     at returnAndAddMetadata (/usr/share/npm/lib/fetch-package-metadata.js:117:7)
+126 error typeerror     at pickVersionFromRegistryDocument (/usr/share/npm/lib/fetch-package-metadata.js:134:20)
+126 error typeerror     at /usr/share/npm/node_modules/iferr/index.js:13:50
+127 error typeerror This is an error with npm itself. Please report this error at:
+127 error typeerror     <http://github.com/npm/npm/issues>
+128 verbose exit [ 1, true ]
